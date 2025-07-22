@@ -1,0 +1,20 @@
+// src/App.jsx
+export default function App() {
+  return (
+    <div style={{ textAlign: 'center', padding: '50px' }}>
+      <h1>👋 Hi, I'm Rana Abdullah</h1>
+      <p>A Software Engineering Student & Aspiring Ethical Hacker</p>
+      <p>💡 I specialize in React, Prompt Engineering, and Cybersecurity</p>
+      
+      <h2>🚀 My Projects</h2>
+      <ul style={{ listStyle: 'none' }}>
+        <li><a href="https://github.com/your-username/project1" target="_blank">🔗 Project 1</a></li>
+        <li><a href="https://github.com/your-username/project2" target="_blank">🔗 Project 2</a></li>
+      </ul>
+
+      <h2>📬 Contact Me</h2>
+      <p>Email: mrrajpoot.327@gmail.com</p>
+      <p>GitHub: <a href="https://github.com/RanaAbdullah00" target="_blank">github.com/RanaAbdullah00</a></p>
+    </div>
+  );
+}
