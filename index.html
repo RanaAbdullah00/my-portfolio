@@ -1,13 +1,280 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Web & Security</title>
+  <meta name="description" content="Professional portfolio of a Web Developer and Cybersecurity Specialist">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   </head>
   <body>
     <div id="root"></div>
+    <body class="light-mode">
+  <header id="header" class="header">
+    <div class="container">
+      <a href="#" class="logo">PORT<span>FOLIO</span></a>
+      <nav class="nav">
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#cybersecurity" class="nav-link">Security</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+      </nav>
+      <button id="mobile-menu-button" class="mobile-menu-button">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Hi, I'm <span class="text-highlight">RANA ABDULLAH</span></h1>
+           
+<h2 class="animated-title">Web Developer  & Cybersecurity Specialist.</h2>
+            <p>Blending web development, cyber defense, and AI prompt mastery to build future-ready digital systems.</p>
+            <div class="hero-buttons">
+              <a href="#projects" class="btn btn-primary">View My Work</a>
+              <a href="#contact" class="btn btn-outline">Contact Me</a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <div class="profile-image-container">
+              <img src="me.jpg.jpg" alt="Rana Abdullah" class="profile-image">
+              <div class="image-border"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-category web-dev">
+            <div class="category-header">
+              <i class="fas fa-code"></i>
+              <h3>Web Development</h3>
+            </div>
+            <ul class="skill-list">
+              <li>HTML/CSS/JavaScript</li>
+              <li>React.js</li>
+              <li>Node.js/Express.js</li>
+              <li>MySQL/MongoDB</li>
+              <li>Learning: DevOps, Secure Backend Development, JWT, Docker</li>
+            </ul>
+          </div>
+          <div class="skill-category cyber-security">
+            <div class="category-header">
+              <i class="fas fa-shield-alt"></i>
+              <h3>Cybersecurity</h3>
+            </div>
+            <ul class="skill-list">
+              <li>Computer Networking (Strong)</li>
+              <li>Penetration Testing (Good)</li>
+              <li>Learning OWASP Top 10</li>
+              <li>Learning Secure Coding Practices</li>
+              <li>Interest: Network Security, Incident Response</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section bg-light">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-image">
+              <img src="urban.png" alt="Urban Project Screenshot" />
+              <div class="project-badge web-dev">Web Dev</div>
+            </div>
+            <div class="project-content">
+              <h3>Urban Woods Furniture E-Commerce Site</h3>
+              <p>Responsive furniture e-commerce website for Urban Wood brand with dynamic product pages, shopping cart, and modern UI built using React.js and Bootstrap</p>
+              <div class="project-tags">
+                <span>React</span>
+                <span>Bootstrap</span>
+                <span>Firebase</span>
+              </div>
+              <div class="project-links">
+                <div class="tech-stack">
+                  <i class="fab fa-react" title="React"></i>
+                  <i class="fab fa-node-js" title="Node.js"></i>
+                  <i class="fas fa-shield-alt" title="OWASP Security"></i>
+                </div>
+                <p class="project-status">🔒 Enterprise Project (NDA)</p>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-image">
+              <img src="cyber.jpg" alt="CyberLab Project Screenshot" />
+              <div class="project-badge cyber-security">Security</div>
+            </div>
+            <div class="project-content">
+              <h3>CyberLab</h3>
+              <p>Game to learn CyberSecurity like TryHackME or HackThe Box</p>
+              <div class="project-tags">
+                <span>Python</span>
+                <span>Flask</span>
+                <span>Browser</span>
+              </div>
+              <div class="project-links">
+                <div class="tech-stack">
+                  <i class="fab fa-python" title="Python"></i>
+                  <i class="fas fa-spider" title="Web Crawling"></i>
+                  <i class="fas fa-search" title="Vulnerability Scanning"></i>
+                </div>
+                <p class="project-status">🔐 Cybersecurity Training Tool (Currently Private)
+
+</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cybersecurity" class="section bg-dark">
+      <div class="container">
+        <h2 class="section-title">Cybersecurity Services</h2>
+        <div class="security-grid">
+          <div class="security-card">
+            <div class="security-icon">
+              <i class="fas fa-user-secret"></i>
+            </div>
+            <h3>Penetration Testing</h3>
+            <ul>
+              <li>Kali Linux</li>
+              <li>Metasploit</li>
+              <li>Burp Suite</li>
+            </ul>
+          </div>
+          <div class="security-card">
+            <div class="security-icon">
+              <i class="fas fa-bug"></i>
+            </div>
+            <h3>Vulnerability Assessment</h3>
+            <ul>
+              <li>Nessus</li>
+              <li>OpenVAS</li>
+              <li>Nmap</li>
+            </ul>
+          </div>
+          <div class="security-card">
+            <div class="security-icon">
+              <i class="fas fa-lock"></i>
+            </div>
+            <h3>Secure Coding</h3>
+            <ul>
+              <li>OWASP Top 10</li>
+              <li>Input Validation</li>
+              <li>JWT Security</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="info-card">
+              <i class="fas fa-envelope"></i>
+              <h3>Email</h3>
+              <p>Mrrajpoot.327@gmail.com</p>
+            </div>
+            <div class="info-card">
+              <i class="fas fa-phone"></i>
+              <h3>Phone</h3>
+              <p>+92 328 4963573</p>
+            </div>
+            <div class="info-card">
+              <i class="fas fa-map-marker-alt"></i>
+              <h3>Location</h3>
+              <p>Lahore, Pakistan</p>
+            </div>
+          </div>
+          <form id="contact-form" class="contact-form" action="https://formsubmit.co/Mrrajpoot.327@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New Message from Portfolio!">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+              <span class="error-message"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+              <span class="error-message"></span>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+              <span class="error-message"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <h3 class="logo">PORT<span>FOLIO</span></h3>
+          <p>Building secure digital experiences</p>
+        </div>
+        <div class="footer-social">
+          <a href="https://github.com/RanaAbdullah00/my-portfolio" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/rana-abdullah-66b263298/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          
+          <a href="https://www.hackerrank.com/profile/mrrajpoot_327" aria-label="HackerRank"><i class="fab fa-hackerrank"></i></a>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p>&copy; <span id="year"></span> PORTFOLIO. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Update copyright year automatically
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Add tooltips to tech stack icons
+    document.querySelectorAll('.tech-stack i').forEach(icon => {
+      icon.addEventListener('mouseover', (e) => {
+        const tooltip = document.createElement('div');
+        tooltip.className = 'tooltip';
+        tooltip.textContent = e.target.getAttribute('title');
+        document.body.appendChild(tooltip);
+        
+        const rect = e.target.getBoundingClientRect();
+        tooltip.style.top = `${rect.top - 30}px`;
+        tooltip.style.left = `${rect.left + rect.width/2 - tooltip.offsetWidth/2}px`;
+      });
+      
+      icon.addEventListener('mouseout', () => {
+        const tooltip = document.querySelector('.tooltip');
+        if (tooltip) tooltip.remove();
+      });
+    });
+  </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
