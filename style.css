@@ -1,13 +1,11 @@
 :root {
-  /* Web Dev Colors (Black/Yellow) */
-  --web-primary: #181818;
-  --web-secondary: #FFD700;
-  --web-accent: #FFC000;
-  
-  /* Cyber Security Colors (Black/Blue) */
-  --cyber-primary: #0A0A0A;
-  --cyber-secondary: #0066FF;
-  --cyber-accent: #00A0FF;
+  /* Color Variables */
+  --black: #181818;
+  --dark-blue: #0A0A0A;
+  --blue: #0066FF;
+  --light-blue: #00A0FF;
+  --yellow: #FFD700;
+  --light-yellow: #FFC000;
   
   /* Global Colors */
   --text: #333333;
@@ -79,7 +77,7 @@ body {
 }
 
 .logo span {
-  color: var(--cyber-secondary);
+  color: var(--blue);
 }
 
 .nav {
@@ -97,7 +95,7 @@ body {
 }
 
 .nav-link:hover {
-  color: var(--cyber-secondary);
+  color: var(--blue);
 }
 
 .nav-link::after {
@@ -107,7 +105,7 @@ body {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: var(--cyber-secondary);
+  background-color: var(--blue);
   transition: width 0.3s;
 }
 
@@ -159,25 +157,25 @@ body {
 }
 
 .btn-primary {
-  background-color: var(--cyber-secondary);
+  background-color: var(--blue);
   color: white;
   box-shadow: 0 4px 15px rgba(0, 102, 255, 0.3);
 }
 
 .btn-primary:hover {
-  background-color: var(--cyber-accent);
+  background-color: var(--light-blue);
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(0, 102, 255, 0.4);
 }
 
 .btn-outline {
-  border: 2px solid var(--cyber-secondary);
-  color: var(--cyber-secondary);
+  border: 2px solid var(--blue);
+  color: var(--blue);
   background-color: transparent;
 }
 
 .btn-outline:hover {
-  background-color: var(--cyber-secondary);
+  background-color: var(--blue);
   color: white;
   transform: translateY(-3px);
 }
@@ -222,7 +220,7 @@ body {
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
-  border: 5px solid var(--cyber-secondary);
+  border: 5px solid var(--blue);
   box-shadow: 0 10px 30px rgba(0, 102, 255, 0.3);
   transition: transform 0.5s, box-shadow 0.5s;
 }
@@ -238,7 +236,7 @@ body {
   left: -10px;
   right: -10px;
   bottom: -10px;
-  border: 2px dashed var(--cyber-secondary);
+  border: 2px dashed var(--blue);
   border-radius: 50%;
   animation: rotate 20s linear infinite;
   z-index: -1;
@@ -256,7 +254,7 @@ body {
 }
 
 .text-highlight {
-  color: var(--cyber-secondary);
+  color: var(--blue);
   position: relative;
   display: inline-block;
 }
@@ -292,8 +290,9 @@ body {
   gap: 1rem;
   margin-top: 2rem;
 }
+
 .project-image {
-  height: 150px; /* You can increase or decrease this */
+  height: 150px;
   overflow: hidden;
   border-bottom: 1px solid var(--border);
 }
@@ -301,10 +300,10 @@ body {
 .project-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures image fills container without distortion */
+  object-fit: cover;
   display: block;
-  border-radius: 0; /* Optional: change to '15px' for rounded image */
 }
+
 /* Section Styles */
 .section {
   padding: 6rem 0;
@@ -328,7 +327,7 @@ body {
   left: 0;
   width: 100%;
   height: 3px;
-  background: linear-gradient(90deg, var(--cyber-secondary), var(--cyber-accent));
+  background: linear-gradient(90deg, var(--blue), var(--light-blue));
   border-radius: 3px;
 }
 
@@ -341,10 +340,10 @@ body {
   color: white;
 }
 
-/* Skills Section */
+/* Skills Section - Updated for full landscape and responsive */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
 }
 
@@ -369,7 +368,7 @@ body {
 }
 
 .skill-category.web-dev {
-  background: linear-gradient(135deg, var(--web-primary), #222222);
+  background: linear-gradient(135deg, var(--black), #222222);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -377,13 +376,22 @@ body {
   background: linear-gradient(135deg, rgba(24,24,24,0.8), rgba(40,40,40,0.9));
 }
 
-.skill-category.cyber-security {
-  background: linear-gradient(135deg, var(--cyber-primary), #111111);
+.skill-category.app-dev {
+  background: linear-gradient(135deg, var(--dark-blue), #111111);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.skill-category.cyber-security::before {
+.skill-category.app-dev::before {
   background: linear-gradient(135deg, rgba(10,10,10,0.8), rgba(20,20,20,0.9));
+}
+
+.skill-category.ai-dev {
+  background: linear-gradient(135deg, var(--black), #222222);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.skill-category.ai-dev::before {
+  background: linear-gradient(135deg, rgba(24,24,24,0.8), rgba(40,40,40,0.9));
 }
 
 .skill-category:hover {
@@ -402,12 +410,17 @@ body {
   font-size: 2rem;
 }
 
+/* Specific colors for each skill category */
 .skill-category.web-dev .category-header i {
-  color: var(--web-secondary);
+  color: var(--yellow);
 }
 
-.skill-category.cyber-security .category-header i {
-  color: var(--cyber-secondary);
+.skill-category.app-dev .category-header i {
+  color: var(--blue);
+}
+
+.skill-category.ai-dev .category-header i {
+  color: var(--yellow);
 }
 
 .skill-category h3 {
@@ -433,17 +446,25 @@ body {
 
 .skill-category.web-dev .skill-list li::before {
   content: '>';
-  position: absolute;
+  position: center;
   left: 0;
-  color: var(--web-secondary);
+  color: var(--yellow);
   font-weight: bold;
 }
 
-.skill-category.cyber-security .skill-list li::before {
+.skill-category.app-dev .skill-list li::before {
   content: '>';
-  position: absolute;
+  position: center;
   left: 0;
-  color: var(--cyber-secondary);
+  color: var(--blue);
+  font-weight: bold;
+}
+
+.skill-category.ai-dev .skill-list li::before {
+  content: '>';
+  position: center;
+  left: 0;
+  color: var(--yellow);
   font-weight: bold;
 }
 
@@ -493,12 +514,12 @@ body {
 }
 
 .project-badge.web-dev {
-  background-color: var(--web-secondary);
-  color: var(--web-primary);
+  background-color: var(--yellow);
+  color: var(--black);
 }
 
-.project-badge.cyber-security {
-  background-color: var(--cyber-secondary);
+.project-badge.app-dev {
+  background-color: var(--blue);
   color: white;
 }
 
@@ -533,13 +554,13 @@ body {
 
 .project-card.web-dev .project-tags span {
   background-color: rgba(255, 215, 0, 0.1);
-  color: var(--web-secondary);
+  color: var(--yellow);
   border: 1px solid rgba(255, 215, 0, 0.3);
 }
 
-.project-card.cyber-security .project-tags span {
+.project-card.app-dev .project-tags span {
   background-color: rgba(0, 102, 255, 0.1);
-  color: var(--cyber-secondary);
+  color: var(--blue);
   border: 1px solid rgba(0, 102, 255, 0.3);
 }
 
@@ -548,7 +569,7 @@ body {
   gap: 0.75rem;
 }
 
-/* Cybersecurity Section */
+/* Services Section */
 .security-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -603,7 +624,7 @@ body {
 .security-icon {
   font-size: 3rem;
   margin-bottom: 1.5rem;
-  color: var(--cyber-secondary);
+  color: var(--blue);
   transition: transform 0.3s;
 }
 
@@ -633,7 +654,7 @@ body {
   content: '▹';
   position: absolute;
   left: 0;
-  color: var(--cyber-secondary);
+  color: var(--blue);
 }
 
 /* Contact Section */
@@ -653,7 +674,7 @@ body {
   padding: 1.5rem;
   border-radius: 10px;
   transition: transform 0.3s;
-  border-left: 4px solid var(--cyber-secondary);
+  border-left: 4px solid var(--blue);
 }
 
 .dark-mode .info-card {
@@ -666,7 +687,7 @@ body {
 
 .info-card i {
   font-size: 1.5rem;
-  color: var(--cyber-secondary);
+  color: var(--blue);
   margin-bottom: 1rem;
 }
 
@@ -724,7 +745,7 @@ body {
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: var(--cyber-secondary);
+  border-color: var(--blue);
   box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.1);
 }
 
@@ -734,7 +755,8 @@ body {
   margin-top: 0.25rem;
   display: none;
 }
-/* ===== Animated Title with Dual Effects ===== */
+
+/* Animated Title */
 .animated-title {
   display: inline-block;
   position: relative;
@@ -778,7 +800,7 @@ body {
   height: 200px;
   background: radial-gradient(
     circle closest-side,
-    rgba(0, 102, 255, 0.4), /* --cyber-secondary color */
+    rgba(0, 102, 255, 0.4),
     transparent 80%
   );
   opacity: 0;
@@ -792,7 +814,7 @@ body {
   height: 150px;
   background: radial-gradient(
     circle closest-side,
-    rgba(0, 102, 255, 0.2), /* Lighter blue shadow */
+    rgba(0, 102, 255, 0.2),
     transparent 70%
   );
   opacity: 0;
@@ -808,8 +830,8 @@ body {
 /* Text shadow enhancement on hover - Updated to blue */
 .animated-title:hover span {
   text-shadow: 
-    0 0 10px rgba(0, 102, 255, 0.7), /* --cyber-secondary */
-    0 0 20px rgba(0, 160, 255, 0.5),  /* --cyber-accent */
+    0 0 10px rgba(0, 102, 255, 0.7),
+    0 0 20px rgba(0, 160, 255, 0.5),
     0 2px 5px rgba(0,0,0,0.3);
 }
 
@@ -821,7 +843,7 @@ body {
 
 .dark-mode .animated-title:hover span {
   text-shadow: 
-    0 0 15px rgba(0, 102, 255, 0.9), /* Brighter blue */
+    0 0 15px rgba(0, 102, 255, 0.9),
     0 0 25px rgba(0, 160, 255, 0.7),
     0 2px 5px rgba(0,0,0,0.5);
 }
@@ -829,18 +851,19 @@ body {
 .dark-mode .animated-title::before {
   background: radial-gradient(
     circle closest-side,
-    rgba(0, 102, 255, 0.6), /* More intense blue */
+    rgba(0, 102, 255, 0.6),
     transparent 80%
   );
 }
 
-/* Keep "Cybersecurity Specialist" together */
+/* Keep "Full-Stack Developer | Flutter & Prompt Engineer" together */
 .nowrap {
   white-space: nowrap;
   display: inline-block;
   position: relative;
   z-index: 1;
 }
+
 /* Footer */
 .footer {
   background-color: var(--bg-dark);
@@ -884,7 +907,7 @@ body {
 }
 
 .footer-social a:hover {
-  color: var(--cyber-secondary);
+  color: var(--blue);
   transform: translateY(-3px);
 }
 
